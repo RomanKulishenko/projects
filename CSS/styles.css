@@ -268,22 +268,27 @@ a:hover {
 .projects__list {
   text-transform: uppercase;
   font-family: Yeseva one, cursive;
-  margin: 0px 0px 25px 0px;
+  margin: 0px -10px 25px 0px;
   display: flex;
   justify-content: flex-end;
   list-style: none;
   padding-top: 90px;
 }
 
-.projects__list-item a {
+.projects__list-item {
   margin-right: 60px;
   color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
   font-size: 14px;
 }
 
-.projects__list-item a:active,
-.projects__list-item a:hover {
+.projects__list-item :hover {
+  color: #e3b873;
+  text-decoration-line: underline;
+  text-underline-offset: 7px;
+}
+
+.active-item {
   color: #e3b873;
   text-decoration-line: underline;
   text-underline-offset: 7px;
@@ -298,6 +303,11 @@ a:hover {
 .projects__text {
   max-width: 442px;
 }
+#text-slider {
+  max-height: 200px;
+  overflow: hidden;
+}
+
 .projects__text h2 {
   font-size: 27px;
   margin-top: 0;
@@ -309,9 +319,13 @@ a:hover {
   line-height: 2;
 }
 
-.projects__options {
+.project__options {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
+}
+
+.text-slider-line {
+  display: flex;
 }
 
 .projects__text-options p {
@@ -331,6 +345,18 @@ a:hover {
   .projects__text p {
     font-size: 11px;
   }
+}
+
+.projects__imges {
+  max-width: 675px;
+  max-height: 480px;
+  overflow: hidden;
+}
+
+.slider-line {
+  display: flex;
+  align-items: center;
+  transition: all 1s;
 }
 
 .projects__imges img {
@@ -386,18 +412,34 @@ a:hover {
 }
 
 .btn__left-arrow,
-.btn__dot,
 .btn__right-arrow {
   background: rgba(0, 0, 0, 0);
   border: 0;
   outline: 0;
   cursor: pointer;
 }
+.dots {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 30px;
+}
 
-.btn__dot:active svg rect,
-.btn__dot:hover svg rect {
-  fill-opacity: 1;
-  top: 2px;
+.dots > *:not(:last-child) {
+  margin-right: 17px;
+}
+
+.btn-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.active-dot {
+  background: #ffffff;
 }
 
 .nav img {

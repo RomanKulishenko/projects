@@ -59,14 +59,14 @@
         <div class="container projects">
           <div class="projects-nav-list">
             <ul class="projects__list">
-              <li class="projects__list-item">
-                <a href="#">Rostov-on-Don, Patriotic</a>
+              <li class="projects__list-item active-item">
+                <p>Rostov-on-Don, Admiral</p>
               </li>
               <li class="projects__list-item">
-                <a href="#">Sochi, Thieves</a>
+                <p>Sochi, Thieves</p>
               </li>
               <li class="projects__list-item">
-                <a href="#">Rostov-on-Don, Admiral</a>
+                <p>Rostov-on-Don, Patriotic</p>
               </li>
             </ul>
           </div>
@@ -91,31 +91,76 @@
                   </button>
                 </div>
               </nav>
-              <div class="projects__options">
-                <div class="projects__text-options">
-                  <h3>City:</h3>
-                  <p>Rostov-on-Don<br />LCD admiral</p>
-                </div>
-                <div class="projects__text-options">
-                  <h3>apartment area:</h3>
-                  <p>81 m<sup>2</sup></p>
-                </div>
-                <div class="projects__text-options">
-                  <h3>Repair time:</h3>
-                  <p>3.5 months</p>
-                </div>
-                <div class="projects__text-options">
-                  <h3>Repair Cost:</h3>
-                  <p>Upon request</p>
+              <div id="text-slider">
+                <div class="text-slider-line">
+                  <div class="project__options">
+                    <div class="projects__text-options">
+                      <h3>City:</h3>
+                      <p>Rostov-on-Don<br />LCD admiral</p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>apartment area:</h3>
+                      <p>81 m<sup>2</sup></p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>Repair time:</h3>
+                      <p>3.5 months</p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>Repair Cost:</h3>
+                      <p>Upon request</p>
+                    </div>
+                  </div>
+                  <div class="project__options">
+                    <div class="projects__text-options">
+                      <h3>City:</h3>
+                      <p>
+                        Sochi<br />Thieves</p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>apartment area:</h3>
+                      <p>105 m<sup>2</sup></p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>Repair time:</h3>
+                      <p>4 months</p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>Repair Cost:</h3>
+                      <p>Upon request</p>
+                    </div>
+                  </div>
+                  <div class="project__options">
+                    <div class="projects__text-options">
+                      <h3>City:</h3>
+                      <p>Rostov-on-Don<br />Patriotic</p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>apartment area:</h3>
+                      <p>93 m<sup>2</sup></p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>Repair time:</h3>
+                      <p>3 months</p>
+                    </div>
+                    <div class="projects__text-options">
+                      <h3>Repair Cost:</h3>
+                      <p>Upon request</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="projects__imges">
-              <img src="../images/jpg/projects.jpg" alt="Project one" />
+            <div class="projects__imges" id="image-slider">
+              <div class="slider-line">
+                <img class="slider__img" src="../images/jpg/projects.jpg" alt="Project one" />
+                <img class="slider__img" src="../images/jpg/projects2.jpg" alt="Project two" />
+                <img class="slider__img" src="../images/jpg/projects3.jpg" alt="Project three" />
+              </div>
             </div>
           </div>
           <div class="btn__btn-arrows">
-            <button class="btn__left-arrow">
+            <button class="btn__left-arrow" id="btn-prev">
               <svg
                 width="42"
                 height="14"
@@ -137,64 +182,12 @@
                 />
               </svg>
             </button>
-            <button class="btn__dot">
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 10 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.0583191"
-                  y="0.336182"
-                  width="9.56667"
-                  height="9.44063"
-                  rx="4.72031"
-                  fill="white"
-                  fill-opacity="0.3"
-                />
-              </svg>
-            </button>
-            <button class="btn__dot">
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 10 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.0583191"
-                  y="0.336182"
-                  width="9.56667"
-                  height="9.44063"
-                  rx="4.72031"
-                  fill="white"
-                  fill-opacity="0.3"
-                />
-              </svg>
-            </button>
-            <button class="btn__dot">
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 10 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.0583191"
-                  y="0.336182"
-                  width="9.56667"
-                  height="9.44063"
-                  rx="4.72031"
-                  fill="white"
-                  fill-opacity="0.3"
-                />
-              </svg>
-            </button>
-            <button class="btn__right-arrow">
+            <div class="dots">
+              <div class="btn-dot active-dot"></div>
+              <div class="btn-dot"></div>
+              <div class="btn-dot"></div>
+            </div>
+            <button class="btn__right-arrow" id="btn-next">
               <svg
                 width="42"
                 height="14"
@@ -966,5 +959,6 @@
     </header>
     </footer>
   </div>
+  <script defer src="../main.js"></script>
   </body>
 </html>
